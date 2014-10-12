@@ -1,79 +1,350 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Radu Blana</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Generator" content="CV Maker - https://cvmkr.com/" />
+	<!-- <link rel="stylesheet" type="text/css" href="cv.css"> -->
+	<style type="text/css">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Cv : ">
+		body {
+			/* background: #f0f0f0; */
+			margin: 0;
+			padding: 0;
+			
+			font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+			font-weight: 300;
+			line-height: 22px;
+			font-size: 14px;
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+			color: #363333;
+		}
 
-    <title>Cv</title>
-  </head>
+		h1, h2, h3, h4 {
+			font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+			font-weight: 300;
+			font-weight: normal;
+			margin: 0 0 15px 0;
+			padding: 0;
+		}
+		h1 {
+			font-size: 350%;
+		}
+		h2 {
+			font-size: 210%;
+		}
+		h3 {
+			font-size: 130%;
+		}
+		
+		p {
+			margin: 0 0 10px 0;
+		}
+		
+		ul {
+			margin: 0;
+			list-style-type: square;
+		}
+		a {
+			color: #222;
+		}
+		/* ________________________________________________________ */
+		.rtl {
+			direction: rtl;
+		}
+		.clear {
+			clear: both;
+		}
 
-  <body>
+		#main {
+			background: #fff;
+			width: 900px;
+			padding: 35px;
+			margin: 0 auto 15px auto;
+			overflow: hidden;
+			
+			/* box-shadow: 0 0 6px #ccc; */
+		}
+		
+		#title {
+			line-height: 42px;
+			border-bottom: 1px solid #000;
+			padding-bottom: 20px;
+			margin: 0px 0 20px 0;
+		}
+		
+		#credit {
+			margin-bottom: 20px;
+			font-size: 11px;
+			color: #999;
+			text-align: center;
+		}
+			#credit a {
+				color: #999;
+			}
+		
+		p label {
+			font-size: 110%;
+			margin-right: 10px;
+		}
+			p label span.colon {
+				display: inline;
+			}
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/radubl/cv">View on GitHub</a>
+		
+		.section {
+			margin-bottom: 10px;
+		}
+		.section .set {
+		}
+		.item {
+			margin: 0 0 20px 0;
+		}
 
-          <h1 id="project_title">Cv</h1>
-          <h2 id="project_tagline"></h2>
+		/*  _____________________________ */
+		.section .title {
+			text-transform: uppercase;
+			font-size: 160%;
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/radubl/cv/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/radubl/cv/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+			margin: 0 auto 15px auto;
+			display: block;
+		}
+			.section .set {
+				margin-left: 25px;
+			}
+			.section .set h3 {
+				margin: 0;
+			}
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		.basic-info {
+			border-top: 0;
+		}
+		.section.basic-info .title {
+			float: left;
+			border: 0;
+		}
+		.basic-info .set {
+			float: right;
+			width: 70%;
+		}
+		.basic-info .address {
+			width: 40%;
+			float: left;
+		}
+		.basic-info .r {
+			float: right;
+			width: 50%;
+			text-align: right;
+		}
+			.basic-info label {
+				font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+				font-weight: 300;
+			}
+			.basic-info label, .basic-info span  {
+				display: inline !important;
+			}
+		.basic-info p {
+			margin: 0;
+		}
+		
+		.section span {
+			display: block;
+		}
+		.section h3 span.l, .section span.r {
+			width: 49%;
+			float: left;
+		}
+			.section span.r {
+				float: right;
+				text-align: right;
+			}
+			.section-education .school,
+			.section-work .job_title {
+				font-size: 100%;
+				display: block;
+				margin: 5px 0 5px 0;
+			}
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		#photo {
+			width: 160px;
+			height: 200px;
+			overflow: hidden;
+			float: left;
+			margin-top: 4px;
+			border-radius: 4px;
+		}
+		#photo img {
+			width: 100%;
+			height: auto;
+		}
+		.header.photo {
+			margin-left: 190px;
+		}
+		.header.photo #title {
+			text-align: left;
+		}
+		.header.photo .basic-info {
+			float: none;
+			padding: 0;
+		}
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		@media screen and (max-width: 950px) {
+			body {
+				background: #fff;
+			}
+			#main {
+				box-shadow: none;
+				padding: 0;
+				padding: 5px;
+			}
+		}
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+	</style>
+</head>
+<body class="lang-en ">
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<div id="main">
+	
+	<h1 id="title">Radu Blana</h1>
+	<div class="basic-info section">
+					<h2 class="title">Contact</h2>
+				<div class="set">
+		
+							<p class="address">
+					<span class="value">
+						nr. 1 Abbey Hill Road, Kenilworth, Warwickshire, CV8 1LW					</span>
+				</p>
+						<div class="r">
+									<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value">r.blana@warwick.ac.uk</span></p>
+				
+				
+									<p class="phone"><label>Phone<span class="colon">:</span></label> <span class="value">07459877051</span></p>
+							</div>
+			<div class="clear"> </div>
+		</div><!-- set //-->
+		<div class="clear"> </div>
+	</div><!-- basic-info //-->
+	<br>
+	
+		
+			<div class="section section-education" style="margin-bottom:40px;">
+			<h2 class="title" >Education</h2>
+			<div class="set">
+						<div class="item">
+							<h3><span class="course l">2nd Year Computer Science</span>
+						<span class="date r">Oct 2013 &mdash; July 2016</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="school">University of Warwick</span><span class="info"><ul><li><strong>Highest marks and preferred courses</strong>:</li><ul><li>Mathematics for Computer Scientists: 92%</li><li>Programming for Computer Scientists: 89%</li><li>Web Development Technologies: 81%</li></ul><li><strong>Achievements</strong>:</li><ul><li>Overall score for the 1st year: 81%</li><li>Award winner of the <strong>Morgan Stanley</strong> prize for outstanding results in the 1st year.</li></ul></ul></span><span class="clear"> </span>
+						</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-1412869794718">
+			<h2 class="title">Technical Experience</h2>
+			<div class="set">
+						<div class="item">
+							<h3><span class="course l">Programming Languages</span></h3><br><br>
+							<span class="info"><ul><li>Intermediate Level: Java, Php, Javascript, HTML, CSS.</li><li>Basic Level: C, Python, SQL, Bash.</li></ul><br>
+							<h3><span class="course l">Platforms, Frameworks</span></h3><br>
+							 <ul><li>Node.js, Angular.js, Activerecord, JQuery, Twitter Bootstrap.</li></ul><br /></span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-work" style="margin-bottom: 40px;">
+			<h2 class="title">Work experience</h2>
+			<div class="set">
+							<div class="item">
+								<h3><span class="company l">Self Employed</span>
+						<span class="date r">Sep 2014 &mdash; Present</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Web Developer</span><span class="info"><ul><li><strong>Aims</strong>: To work alongside a UX Designer towards creating a financial management web application for companies in Romania. Key features: generating printable invoices, graphs and reports.</li><li><strong>Achievements</strong>: A secure registration, login and password retrieval system using PHP and Activerecord.</li></ul></span><span class="clear"> </span>
+							</div>
+						
+							<div class="item">
+								<h3><span class="company l">SC Etolia SRL</span>
+						<span class="date r">Aug 2014 &mdash; Present</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Web Designer</span><span class="info"><ul><li><strong>Aims</strong>: To redesign/update the company's website and logo based on current web standards and tendencies.</li><li><strong>Achievements</strong>: Created a modular skeleton using AngularJS and completed the Home and Contact page.</li></ul></span><span class="clear"> </span>
+							</div>
+						
+							<div class="item">
+								<h3><span class="company l">Self Employed</span>
+						<span class="date r">Feb 2014 &mdash; April 2014</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Java Developer</span><span class="info"><ul><li><strong>Aims</strong>: To create an educational Java 2D Swing game.</li><li><strong>Achievements</strong>: Enhanced my grasp on core OOP concepts and refined my client-oriented communication skills.</li></ul></span><span class="clear"> </span>
+							</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-1412870435475">
+			<h2 class="title">University Projects</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info">
+							<h3><span class="company l">Robot in a Maze</span>
+							<span class="date r">Nov 2013 &mdash; Dec 2013</span></h3><br><br>
+							<ul><li><strong>Aims</strong>: To create a working algorithm that would lead a robot out of the maze in the minimum amount of steps/time.</li><li><strong>Achievements</strong>: Implemented an A* search algorithm and transformed the Maze into a Snake game at run time. Award winner of the <strong>Bank of America Merrill Lynch </strong>prize for one of the best solutions. Overall mark: 95%.</li></ul><strong><br /></strong>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+							<h3><span class="course l">Witter</span>
+							<span class="date r">Feb 2014 &mdash; March 2014</span></h3><br><br>
+							<ul><li><strong>Aims</strong>: To design and implement the Data Storage Mechanism for a provided copy of Twitter.</li><li><strong>Achievements</strong>: Implemented a structure of Hash Maps and B-Trees for optimal insertion and access times. Overall mark: 78%.</li></ul><strong><br /></strong>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+							<h3><span class="course l">Bill Handler</span>
+							<span class="date r">Feb 2014 &mdash; March 2014</span></h3><br>
+							<br /><ul><li><strong>Aims</strong>: To create a Bill Management Web Application for future house sharers.</li><li><strong>Achievements</strong>: Fully met the specification, as well as implementing additional functions such as live messaging and creating to-do lists. Overall mark: 85%.</li></ul><br /></span>
+						</div>
+					</div>
+			
+		</div>
+			<div class="section section-qualifications">
+			<h2 class="title">Personal Projects</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info"><h3><span class="course l">Paper Planes</span>
+							<span class="date r">March 2014 &mdash; April 2014</span></h3><br><br>
+							<ul><li><strong>Main Language</strong>: Javascript</li><li><strong>Description</strong>:  A Node.js online game that uses web sockets for handling live events.</li></ul>
+						</div><br>
+					</div>
+		</div>
+		<div class="section section-work" style="margin-bottom: 40px;">
+			<h2 class="title">Extracurricular Activities</h2>
+			<div class="set">
+							<div class="item">
+								<h3><span class="company l">&quot;Youth in Action&quot; Programme</span>
+								<span class="date r">June 2012 &mdash; August 2012</span>
+								</h3>
+								<span class="clear"> </span>
+								<span class="job_title">Tutor</span><span class="info"><ul><li><strong>Aims</strong>: To work within a team of eight tutors in designing team-building activities and energisers for children with social difficulties.</li><li><strong>Achievements</strong>: Enhanced my understanding of group motivation, leadership and working in a stressful environment.</li></ul></span><span class="clear"> </span>
+							</div>
+							<div class="item">
+								<h3><span class="company l">Lucaciu Youth Club</span>
+								<span class="date r">Jan 2010 &mdash; July 2012</span>
+								</h3>
+								<span class="clear"> </span>
+								<span class="job_title">Founder Member</span><span class="info"><ul><li><strong>Aims</strong>: To work within a team of eight tutors in designing team-building activities and energisers for children with social difficulties.</li><li><strong>Achievements</strong>: Enhanced my understanding of group motivation, leadership and working in a stressful environment.</li></ul></span><span class="clear"> </span>
+							</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Cv maintained by <a href="https://github.com/radubl">radubl</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+			<div class="section section-references" >
+			<h2 class="title">References</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info">References available on request.</span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		
+		
+			</div>
+</body>
 </html>

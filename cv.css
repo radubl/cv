@@ -1,226 +1,111 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700,300italic);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@media print { body { -webkit-print-color-adjust: exact; } }
+
+/* base */
+html {
+    font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 16px;
+    color: #363333;
+    letter-spacing: 0.1px;
+}
 body {
-	/*background: #f0f0f0; */
-	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
-	font-weight: 300;
-	line-height: 22px;
-	font-size: 14px;
-	color: #363333;
-	text-align: justify;
+    background: whitesmoke;
 }
-
-#main {
-	background: #fff;
-	width: 900px;
-	padding: 35px;
-	margin: 0 auto 15px auto;
-	overflow: hidden;
-	/*box-shadow: 0 0 6px #ccc; */
-}
-
-h1,
-h2,
-h3,
-h4 {
-	font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
-	font-weight: 300;
-	font-weight: normal;
-	margin: 0 0 15px 0;
-	padding: 0;
-}
-
 h1 {
-	font-size: 350%;
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 4rem 0;
 }
-
 h2 {
-	font-size: 210%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 4rem;
+    padding-bottom:  0.5rem;
+    border-bottom: 1px solid #ececec;
 }
-
+h2.section-header + .cv-item {
+    margin-top: -1rem;
+}
 h3 {
-	font-size: 130%;
+    margin:  0;
+    margin-top: 2rem;
+    font-weight: 600;
 }
-
 p {
-	margin: 0 0 10px 0;
+    margin: 0;
 }
-
 ul {
-	margin: 0;
-	list-style-type: square;
+    margin: 0 0 0 -20px;
 }
 
-a {
-	color: #222;
+h4 {
+    margin: 0.5rem 0;
 }
 
-
-/* ________________________________________________________ */
-
-.rtl {
-	direction: rtl;
+/* layout */
+.cv-container {
+    width: calc(210px * 5);
+    background: white;
+    margin: 1rem auto;
+    position: relative;
 }
-
-.clear {
-	clear: both;
+.cv-container:before {
+    position:  absolute;
+    width: 110%;
+    content: '';
+    height: calc(100% + 5rem);
+    background:  white;
+    z-index: -1;
+    top: -4rem;
+    left: -5%;
 }
-
-#title {
-	line-height: 42px;
-	border-bottom: 1px solid #000;
-	padding-bottom: 20px;
-	margin: 0px 0 20px 0;
+.cv-header {
+    margin-bottom: -1rem;
 }
-
-#credit {
-	margin-bottom: 20px;
-	font-size: 11px;
-	color: #999;
-	text-align: center;
+.cv-body {
+    display:  flex;
 }
-
-#credit a {
-	color: #999;
+.cv-column {
+    width: 400px;
 }
-
-p label {
-	font-size: 110%;
-	margin-right: 10px;
-}
-
-p label span.colon {
-	display: inline;
-}
-
-.section {
-	margin-bottom: 10px;
-}
-
-.section .set {}
-
-.item {
-	margin: 0 0 20px 0;
+.cv-column#main{   
+    margin-left: 4rem;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 
-/*  _____________________________ */
-
-.section .title {
-	text-transform: uppercase;
-	font-size: 160%;
-	margin: 0 auto 15px auto;
-	display: block;
+.email a {
+    color: inherit;
+    text-decoration: none;
+}
+.email a:hover {
+    text-decoration:  underline;
 }
 
-.section .set {
-	margin-left: 25px;
+
+/* section */
+span.cv-item-dates {
+    margin-right: 1rem;
+    padding:  0 1rem;
+    background: #efefef;
+    font-weight: 600;
+    font-size: 80%;
+    text-transform: uppercase;
 }
 
-.section .set h3 {
-	margin: 0;
+.details span {
+    margin-right: 0.75rem;
+    color: gray;
 }
-
-.basic-info {
-	border-top: 0;
+.details i.fa, .details i.far {
+    margin-right: 0.35rem;
+    color: #c3c3c3;
 }
-
-.section.basic-info .title {
-	float: left;
-	border: 0;
-}
-
-.basic-info .set {
-	float: right;
-	width: 70%;
-}
-
-.basic-info .address {
-	width: 40%;
-	float: left;
-}
-
-.basic-info .r {
-	float: right;
-	width: 50%;
-	text-align: right;
-}
-
-.basic-info label {
-	font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
-	font-weight: 300;
-}
-
-.basic-info label,
-.basic-info span {
-	display: inline !important;
-}
-
-.basic-info p {
-	margin: 0;
-}
-
-.section span {
-	display: block;
-}
-
-.section h3 span.l,
-.section span.r {
-	width: 49%;
-	float: left;
-}
-
-.section span.r {
-	float: right;
-	text-align: right;
-}
-
-.section-education .school,
-.section-work .job_title {
-	font-size: 100%;
-	display: block;
-	margin: 5px 0 5px 0;
-}
-
-#photo {
-	width: 160px;
-	height: 200px;
-	overflow: hidden;
-	float: left;
-	margin-top: 4px;
-	border-radius: 4px;
-}
-
-#photo img {
-	width: 100%;
-	height: auto;
-}
-
-.header.photo {
-	margin-left: 190px;
-}
-
-.header.photo #title {
-	text-align: left;
-}
-
-.header.photo .basic-info {
-	float: none;
-	padding: 0;
-}
-
-@media screen and (max-width: 950px) {
-	body {
-		background: #fff;
-	}
-	#main {
-		box-shadow: none;
-		padding: 0;
-		padding: 5px;
-	}
-}
-
-.hidden {
-	display: none;
+.details span:not(:last-child):after {
+    content: '|';
+    margin-left:  0.75rem;
+    color: gainsboro;
 }

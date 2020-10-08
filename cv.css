@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:300,400,600,700');
 @media print { body { -webkit-print-color-adjust: exact; } }
 
 /* base */
 html {
-    font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+    font-family: 'PT Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
     font-weight: 400;
     line-height: 27px;
     font-size: 16px;
@@ -12,11 +12,14 @@ html {
 }
 body {
     background: whitesmoke;
+    margin: 0;
+    padding: 26px;
 }
 h1 {
     font-size: 5rem;
     font-weight: 300;
     margin: 4rem 0;
+    padding-top: 1rem;
 }
 h2 {
     font-size: 1.5rem;
@@ -29,9 +32,9 @@ h2.section-header + .cv-item {
     margin-top: -1rem;
 }
 h3 {
-    margin:  0;
-    margin-top: 2rem;
+    margin:  3rem 0 0.25rem 0;
     font-weight: 600;
+    font-size: 20px;
 }
 p {
     margin: 0;
@@ -66,6 +69,7 @@ h4 {
 }
 .cv-body {
     display:  flex;
+    padding-bottom: 3rem;
 }
 .cv-column {
     width: 400px;
@@ -75,7 +79,11 @@ h4 {
     width: 100%;
     margin-right: 2rem;
 }
-
+.cv-item-body {
+    margin-top: 1rem;
+    border-left: 1px solid whitesmoke;
+    padding-left: 1.5rem;
+}
 
 .email a {
     color: inherit;
